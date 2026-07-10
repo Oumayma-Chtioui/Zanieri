@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Costume Milano Marine",
+    "category": "costumes",
+    "price": 480,
+    "fabric": "Laine peignée",
+    "fit": "Slim",
+    "sizes": ["46", "48", "50", "52", "54"],
+    "badge": "Nouveau",
+    "stock": 6,
+    "description": "Costume deux-pièces en laine peignée, coupe ajustée.",
+    "is_featured": true,
+    "local_image": "./sample-images/costume-milano-marine.jpg"
+  },
+  {
+    "name": "Chemise Oxford Blanche",
+    "category": "chemises",
+    "price": 95,
+    "fabric": "Coton Oxford",
+    "fit": "Regular",
+    "sizes": ["39", "40", "41", "42", "43"],
+    "stock": 20,
+    "description": "La chemise blanche fondamentale, en coton Oxford durable.",
+    "is_featured": true,
+    "image_url": "https://example.com/already-hosted-image.jpg"
+  }
+]

@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f8f5ef;
+  color: #1b1a18;
+}
+
+/* Visible keyboard focus everywhere, brand-colored */
+:focus-visible {
+  outline: 2px solid #8a6f41;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* --- Signature design language ------------------------------------ */
+
+/* Stitched thread divider: mimics a single line of visible tailor's
+   stitching instead of a plain <hr>. Used between storefront sections. */
+.stitch-divider {
+  position: relative;
+  height: 1px;
+  background-image: repeating-linear-gradient(
+    to right,
+    #c4b896 0,
+    #c4b896 6px,
+    transparent 6px,
+    transparent 12px
+  );
+  opacity: 0.9;
+}
+
+.stitch-divider-v {
+  width: 1px;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    #c4b896 0,
+    #c4b896 6px,
+    transparent 6px,
+    transparent 12px
+  );
+  opacity: 0.9;
+}
+
+/* Garment tag: the card shape used for products throughout the site.
+   A small punched hole sits top-left, like a swing tag on a jacket. */
+.garment-tag {
+  position: relative;
+  background: #fdfcf9;
+  border: 1px solid #e4e2dd;
+  clip-path: polygon(
+    18px 0%,
+    100% 0%,
+    100% 100%,
+    0% 100%,
+    0% 18px
+  );
+}
+
+.garment-tag::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #f8f5ef;
+  border: 1px solid #9b9585;
+  z-index: 2;
+}
+
+/* Fabric-swatch chip used for category & size selectors */
+.swatch-chip {
+  position: relative;
+  border: 1px solid #c7c3b9;
+  transition: border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+}
+
+.swatch-chip[data-active="true"] {
+  border-color: #1b1a18;
+  background-color: #1b1a18;
+  color: #f8f5ef;
+}
+
+/* Running stitch underline for links / nav items */
+.stitch-underline {
+  background-image: linear-gradient(#8a6f41, #8a6f41);
+  background-size: 0% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s ease;
+}
+.stitch-underline:hover,
+.stitch-underline[data-active="true"] {
+  background-size: 100% 1px;
+}
+
+/* Pin-tuck marker used instead of generic bullet dots */
+.tuck-marker {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border: 1px solid #8a6f41;
+  transform: rotate(45deg);
+  flex: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.text-balance {
+  text-wrap: balance;
+}

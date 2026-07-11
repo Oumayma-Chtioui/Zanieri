@@ -1,12 +1,10 @@
 {
-  "name": "store-shop",
+  "name": "zanieri-shop",
   "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "preview": "opennextjs-cloudflare preview",
-    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
     "start": "next start",
     "lint": "next lint",
     "import:products": "node scripts/bulk-import-products.js"
@@ -14,6 +12,7 @@
   "dependencies": {
     "@supabase/supabase-js": "^2.45.4",
     "browser-image-compression": "^2.0.2",
+    "jszip": "^3.10.1",
     "lucide-react": "^0.441.0",
     "next": "15.5.20",
     "papaparse": "^5.4.1",
@@ -25,7 +24,6 @@
     "autoprefixer": "^10.4.20",
     "dotenv": "^16.4.5",
     "postcss": "^8.4.47",
-    "tailwindcss": "^3.4.13",
-    "@opennextjs/cloudflare": "^1.20.1"
+    "tailwindcss": "^3.4.13"
   }
 }
